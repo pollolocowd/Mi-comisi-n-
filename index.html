@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Comisión</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenido a Mi Comisión</h1>
+    <div id="authSection">
+      <input type="text" id="codigoInvitacion" placeholder="Código de invitación" />
+      <button onclick="registrarUsuario()">Entrar</button>
+    </div>
+
+    <div id="appSection" style="display:none;">
+      <h2 id="userSaludo"></h2>
+      <p>Saldo actual: $<span id="saldoActual">0</span></p>
+
+      <input type="number" id="cantidadRecarga" placeholder="Cantidad a recargar" />
+      <button onclick="recargarSaldo()">Recargar</button>
+
+      <input type="number" id="cantidadRetiro" placeholder="Cantidad a retirar" />
+      <button onclick="solicitarRetiro()">Solicitar Retiro</button>
+
+      <h3>Historial</h3>
+      <ul id="historial"></ul>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
